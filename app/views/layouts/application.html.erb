@@ -4,18 +4,22 @@
     <title>Jdstore</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'be', 'data-turbolinks-track': 'reload' %>
+
+     <!-- 上面是原文，下面是重新引用的文件 -->
+     <script type="text/javascript" src="/app/assets/javascripts/min.js"></script>
+     <script type="text/javascript" src="/app/assets/javascripts/be.js"></script>
+     <script type="text/javascript" src="/app/assets/javascripts/application.js"></script>
+
   </head>
 
   <body>
     <div class="container-fluid">
-        <%= render 'common/navbar' %>
-        <%= render 'common/flashes' %>
         <%= yield %>
     </div>
-
-    <%= render 'common/footer' %>
 
   </body>
 </html>
