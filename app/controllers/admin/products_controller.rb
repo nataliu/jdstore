@@ -12,11 +12,12 @@ class Admin::ProductsController < ApplicationController
   end
   def new
     @product = Product.new
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @product = Product.new(product_params)
-
+    @product.category_id = params[:category_id]
     if @product.save
       redirect_to admin_products_path
     else
@@ -44,6 +45,6 @@ end
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image, :category_id)
   end
 end
