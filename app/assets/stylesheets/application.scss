@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+ @import 'font-awesome';
+
+ .snip1423 {
+   font-family: 'Oswald', Arial, sans-serif;
+   position: relative;
+   float: left;
+   //margin: 20px 1%;
+   //width: 250px;
+   //max-width: 315px;
+   width: 100%;
+   background: #ffffff;
+   text-align: center;
+   color: #000000;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+   font-size: 16px;
+   padding: 15px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-transition: all 0.2s ease-out;
+   transition: all 0.35s ease-out;
+ }
+ .snip1423 * {
+   -webkit-box-sizing: padding-box;
+   box-sizing: padding-box;
+   -webkit-transition: all 0.35s ease-out;
+   transition: all 0.35s ease-out;
+ }
+ .snip1423 img {
+   width: 100%;
+   height: 300px;
+   vertical-align: top;
+   position: relative;
+ }
+ .snip1423 figcaption {
+   padding: 20px 15px;
+   text-align: left;
+ }
+ .snip1423:hover,
+.snip1423.hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
