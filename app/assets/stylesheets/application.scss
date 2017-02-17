@@ -39,7 +39,7 @@ html {
     white-space: nowrap;
 }
 
-.caret:before,
+.fa-fa-caret-down-down:before,
 .glyphicon {
     -moz-osx-font-smoothing: grayscale;
 }
@@ -823,19 +823,19 @@ html {
     content: "\f0d7";
 }
 
-.lil-caret-down:before {
+.lil-fa-fa-caret-down-down-down:before {
     content: "\f0d8";
 }
 
-.lil-caret-up:before {
+.lil-fa-fa-caret-down-down-up:before {
     content: "\f0d9";
 }
 
-.lil-caret-left:before {
+.lil-fa-fa-caret-down-down-left:before {
     content: "\f0da";
 }
 
-.lil-caret-right:before {
+.lil-fa-fa-caret-down-down-right:before {
     content: "\f0db";
 }
 
@@ -1267,15 +1267,15 @@ html {
     content: "\f14e";
 }
 
-.lil-caret-square-o-down:before {
+.lil-fa-fa-caret-down-down-square-o-down:before {
     content: "\f150";
 }
 
-.lil-caret-square-o-up:before {
+.lil-fa-fa-caret-down-down-square-o-up:before {
     content: "\f151";
 }
 
-.lil-caret-square-o-right:before {
+.lil-fa-fa-caret-down-down-square-o-right:before {
     content: "\f152";
 }
 
@@ -1511,7 +1511,7 @@ html {
     content: "\f191";
 }
 
-.lil-caret-square-o-left:before {
+.lil-fa-fa-caret-down-down-square-o-left:before {
     content: "\f192";
 }
 
@@ -6511,8 +6511,8 @@ th {
         display: none;
     }
 
-    .btn > .caret,
-    .dropup > .btn > .caret {
+    .btn > .fa-fa-caret-down-down,
+    .dropup > .btn > .fa-fa-caret-down-down {
         border-top-color: #000!important;
     }
 
@@ -10573,7 +10573,7 @@ tbody.collapse.in {
     transition-timing-function: ease;
 }
 
-.caret {
+.fa-fa-caret-down-down {
     display: inline-block;
     margin-left: 2px;
     border-top: 4px solid\9;
@@ -10712,8 +10712,8 @@ tbody.collapse.in {
     left: auto;
 }
 
-.dropup .caret,
-.navbar-fixed-bottom .dropdown .caret {
+.dropup .fa-fa-caret-down-down,
+.navbar-fixed-bottom .dropdown .fa-fa-caret-down-down {
     border-top: 0;
     border-bottom: 4px dashed;
     border-bottom: 4px solid\9;
@@ -10785,7 +10785,7 @@ tbody.collapse.in {
     margin-left: 5px;
 }
 
-.btn .caret,
+.btn .fa-fa-caret-down-down,
 .btn-group > .btn:first-child {
     margin-left: 0;
 }
@@ -10816,13 +10816,13 @@ tbody.collapse.in {
     box-shadow: none;
 }
 
-.btn-group-lg > .btn .caret,
-.btn-lg .caret {
+.btn-group-lg > .btn .fa-fa-caret-down-down,
+.btn-lg .fa-fa-caret-down-down {
     border-width: 5px 5px 0;
 }
 
-.dropup .btn-group-lg > .btn .caret,
-.dropup .btn-lg .caret {
+.dropup .btn-group-lg > .btn .fa-fa-caret-down-down,
+.dropup .btn-lg .fa-fa-caret-down-down {
     border-width: 0 5px 5px;
 }
 
@@ -12470,7 +12470,7 @@ a.thumbnail:hover {
     vertical-align: top;
 }
 
-.caret,
+.fa-fa-caret-down-down,
 .media-middle {
     vertical-align: middle;
 }
@@ -14192,7 +14192,7 @@ body {
     width: 100%;
 }
 
-.caret {
+.fa-fa-caret-down-down {
     border: none;
     width: inherit;
     height: inherit;
@@ -14200,7 +14200,7 @@ body {
     margin: 0;
 }
 
-.caret:before {
+.fa-fa-caret-down-down:before {
     content: '\e10f';
     font-family: Liliom;
     speak: none;
@@ -15702,14 +15702,18 @@ a.effect:hover:after {
 
 .swiper-slider .fullscreen {
     min-height: 450px;
-    max-height: 600px;
-}
+    max-height: 500px;
+    overflow: hidden; 
+    position: relative;
+} // 后面两句是新增的
 
 .swiper-slider .swiper-container-fade .swiper-slide {
-    background-size: cover;
+    background-size: 1200px 400px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-}
+    overflow: hidden;
+    position: relative;
+} // 后面两句是新增的 这个不是相当于container整个容器么？
 
 .swiper-slider .swiper-container-fade .swiper-slide .valign {
     text-align: left;
@@ -15738,6 +15742,7 @@ a.effect:hover:after {
 .swiper-slider .swiper-container-fade .swiper-container-rtl .swiper-button-prev:hover,
 .swiper-slider .swiper-container-fade .swiper-slide .valign span {
     color: #e74c3c;
+    display: block;
 }
 
 .swiper-slider .swiper-container-fade .swiper-pagination-bullet-active {
@@ -15770,6 +15775,14 @@ a.effect:hover:after {
 .swiper-slider .swiper-container-fade .swiper-container-rtl .swiper-button-prev {
     right: 30px;
 }
+
+swiper-button-prev，.swiper-button-next {
+    display :none;
+} //not show
+
+:hover swiper-button-prev，.swiper-button-next {
+    display :block;
+} 
 
 .product {
     margin-bottom: 30px;
@@ -15891,7 +15904,7 @@ a.effect:hover:after {
 .product .product-price,
 .product-price {
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 30px;
     font-weight: 500;
     color: #fff;
@@ -15909,7 +15922,7 @@ a.effect:hover:after {
 
 .product .product-price del,
 .product-price del {
-    font-size: 20px;
+    font-size: 12px;
     display: inline-block;
     font-weight: 400;
     color: rgba(51,51,51,.65);
@@ -17098,8 +17111,11 @@ a.effect:hover:after {
     margin-bottom: 30px;
 }
 
-.footer .widgets .inputs-border .form-control {
+.footer .widgets .inputs-border {
     border-color: #323237;
+    border-style:solid;
+    border-bottom:thick #323237;
+    z-index: 1;
 }
 
 .footer .widgets .widget-links {
@@ -17126,26 +17142,23 @@ a.effect:hover:after {
 }
 
 .footer .widgets .widget-newsletter form {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .widgets .widget-title:hover {
+    color: red;
 }
 
 .footer .widgets .widget-newsletter form .form-control {
     padding-left: 0;
-}
-
-.footer .widgets .widget-newsletter form .form-group {
     position: relative;
+    border-color: #323237;
+    border-style:solid;
+    border-bottom:thick #323237;
+    z-index: 1;
+    font-size: 50px;
 }
 
-.footer .widgets .widget-newsletter form .form-group .btn {
-    background-color: transparent;
-    color: #323237;
-    border: none;
-    padding: 10px 0;
-    position: absolute;
-    top: 5px;
-    right: 0;
-}
 
 .footer .widgets .widget-instagram a:after {
     width: 100%;
@@ -17153,7 +17166,7 @@ a.effect:hover:after {
 }
 
 .footer .copy-right {
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
     background-color: #f5f5f5;
     padding: 20px;
@@ -17312,7 +17325,7 @@ a.effect:hover:after {
 
 .swiper-button-next,
 .swiper-button-prev {
-    position: absolute;
+    position: absolute; 
     top: 50%;
     width: 27px;
     height: 44px;
@@ -17765,4 +17778,46 @@ button.swiper-pagination-bullet {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+
+// 新增的轮播图
+
+
+.carousel {
+    overflow: hidden;
+    background-size: 1200px 400px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}// 后面是新增的 这个不是相当于container整个容器么
+
+.carousel .item {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.carousel .active.left, .carousel .active.right {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+.carousel .next, .carousel .prev {
+    left:0;
+    opacity:1;
+    z-index:1;
+}
+.item:nth-child(1) {
+  background: darkred;
+}
+
+.item:nth-child(2) {
+  background: red;
+}
+
+.item:nth-child(3) {
+  background: orange;
 }
