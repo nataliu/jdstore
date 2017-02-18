@@ -27,4 +27,5 @@ Rails.application.routes.draw do
  end
 
   root 'welcome#index'
+  get 'ourshows' => 'welcome#ourshows'
 end

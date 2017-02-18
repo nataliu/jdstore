@@ -13,14 +13,39 @@
  *= require_tree .
  *= require_self
  */
-
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import 'font-awesome';
-
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+ @import 'font-awesome';
 
 
-@charset "UTF-8";
+
+ @charset "UTF-8";
+
+
+
+.label{
+  font-weight: normal;
+  position: absolute;
+  top: -5px;
+  left: 55px;
+  padding: 3px 5px;
+  -webkit-padding-before: 3px;
+  -webkit-padding-end: 5px;
+  -webkit-padding-after: 3px;
+  -webkit-padding-start: 5px;
+  font-size: 12px;
+  transform: scale(0.833);
+  border-radius: 10px;
+  background-color: #C30B1C;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+
+}
+
+// 为ourshow上面增加一个hot的标签
 
 .glyphicon,
 address {
@@ -15703,7 +15728,7 @@ a.effect:hover:after {
 .swiper-slider .fullscreen {
     min-height: 450px;
     max-height: 500px;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
 } // 后面两句是新增的
 
@@ -15782,7 +15807,7 @@ swiper-button-prev，.swiper-button-next {
 
 :hover swiper-button-prev，.swiper-button-next {
     display :block;
-} 
+}
 
 .product {
     margin-bottom: 30px;
@@ -17325,7 +17350,7 @@ swiper-button-prev，.swiper-button-next {
 
 .swiper-button-next,
 .swiper-button-prev {
-    position: absolute; 
+    position: absolute;
     top: 50%;
     width: 27px;
     height: 44px;
