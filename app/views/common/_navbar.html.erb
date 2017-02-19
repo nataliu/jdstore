@@ -18,6 +18,28 @@
                     </a>
                 </div>
                 <ul class="navbar-nav navbar-icons">
+                    <!-- 增加个人登陆等页面 -->
+
+                    <% if !current_user %>
+                    <li><%= link_to(content_tag(:i, '注册', class: 'fa fa-sign-in'), new_user_registration_path) %></li>
+                    <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+                <% else %>
+                    <li class='dropdown'>
+                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+                            Hi!,
+                            <%= current_user.email %>
+                            <b class='caret'></b>
+                        </a>
+                        <ul class='dropdown-menu'>
+                            <% if current_user.admin?%>
+                            <li><%= link_to('Admin 选单', admin_products_path) %></li>
+                            <% end %>
+                            <li><%= link_to('个人订单列表',account_orders_path) %></li>
+                            <li><%= link_to(content_tag(:i,'登出',class:'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
+                        </ul>
+                    </li>
+                    <% end %>
+                    <!-- 完  增加个人登陆等 -->
                     <li class="shopping-cart">
                         <a href="#!" class="li-icon" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -37,26 +59,26 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
                     <li >
-                        <a href="#" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">FEATURED
+                        <a href="/products" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">ALL PRODUCTS
                             <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <!--这里的dropdown-menu好像没有在css里做定义，是购物车下拉单里用过的-->
                             <li>
-                                <a href="#">SALE</a>
+                                <a href="/products">SALE</a>
                             </li>
                             <li>
-                                <a href="#">WHAT'S NEW</a>
+                                <a href="/products">WHAT'S NEW</a>
                             </li>
                             <li>
-                                <a href="#">BEST SELLERS</a>
+                                <a href="/products">BEST SELLERS</a>
                             </li>
                             <!-- <li><a href="index-4.html#instagram">BEST SELLERS</a></li> -->
                         </ul>
                     </li>
                     <!-- 增加our shows页面 -->
                     <li class="active">
-                    <%=link_to 'OUR SHOWS', ourshows_path %>
+                        <%=link_to 'OUR SHOWS', ourshows_path %>
                         <span class='label'>HOT!</span>
                     </li>
                     <!-- 完/增加our shows页面 -->
