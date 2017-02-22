@@ -10,22 +10,21 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
+production:
+  AWS_ACCESS_KEY_ID: "AKIAIO575NHSO3YGLPBA"  # 你的 Access key ID
 
-  production:
-    AWS_ACCESS_KEY_ID: "AKIAIO575NHSO3YGLPBA"  # 你的 Access key ID
+  AWS_SECRET_ACCESS_KEY: "88Dy7TMdtMVMMYKJtOy8ZRvCE9gq2gdnfNHIkk78"  # 你的 Secret access key
 
-    AWS_SECRET_ACCESS_KEY: "88Dy7TMdtMVMMYKJtOy8ZRvCE9gq2gdnfNHIkk78"  # 你的 Secret access key
+  AWS_REGION: "ap-northeast-1"  # 你的 S3 bucket 的 Region 位置
 
-    AWS_REGION: "ap-northeast-1"  # 你的 S3 bucket 的 Region 位置
-
-    AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
+  AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
 
 
-  development:
-    AWS_ACCESS_KEY_ID: "AKIAIO575NHSO3YGLPBA"  # 你的 Access key ID
+development:
+  AWS_ACCESS_KEY_ID: "AKIAIO575NHSO3YGLPBA"  # 你的 Access key ID
 
-    AWS_SECRET_ACCESS_KEY: "88Dy7TMdtMVMMYKJtOy8ZRvCE9gq2gdnfNHIkk78"  # 你的 Secret access key
+  AWS_SECRET_ACCESS_KEY: "88Dy7TMdtMVMMYKJtOy8ZRvCE9gq2gdnfNHIkk78"  # 你的 Secret access key
 
-    AWS_REGION: "ap-northeast-1"  # 你的 S3 bucket 的 Region 位置
+  AWS_REGION: "ap-northeast-1"  # 你的 S3 bucket 的 Region 位置
 
-    AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
+  AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
