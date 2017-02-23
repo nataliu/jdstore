@@ -2,6 +2,9 @@ class OrdersController < ApplicationController
 
   before_action :authenticate_user!, only:[:create]
 
+  def index
+  end
+
   def create
     @order = Order.new(order_params)
     @order.user = current_user
@@ -55,7 +58,7 @@ class OrdersController < ApplicationController
     flash[:notice] = "已提交申请"
     redirect_to :back
   end
-  
+
   private
 
   def order_params
