@@ -84,10 +84,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-end
+  config.action_mailer.default_url_options = { :host: 'localhost:3000' }  #if it is local then 'localhost:3000'
 
-Rails.application.routes.default_url_options[:host] = 'https://aqueous-atoll-62567.herokuapp.com'
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
+end
