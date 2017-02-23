@@ -84,8 +84,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # config.action_mailer.default_url_options = { host: 'https://aqueous-atoll-62567.herokuapp.com' }
-  config.action_mailer.default_url_options = { :host => ENV['MAILER_URL'] }
-  heroku config:set MAILER_URL=https://aqueous-atoll-62567.herokuapp.com
+  config.action_mailer.default_url_options = { host: 'https://aqueous-atoll-62567.herokuapp.com' }
+
 
 end
