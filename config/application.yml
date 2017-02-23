@@ -19,6 +19,10 @@ production:
 
   AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
 
+  PROJECT_ID:  "138138"
+
+  PROJECT_KEY:   "05fb7df4ea90cc917a247e54e9f8b46c"
+
 
 development:
   AWS_ACCESS_KEY_ID: "AKIAIO575NHSO3YGLPBA"  # 你的 Access key ID
@@ -28,3 +32,7 @@ development:
   AWS_REGION: "ap-northeast-1"  # 你的 S3 bucket 的 Region 位置
 
   AWS_BUCKET_NAME: "jdstore01"  # 你设定的 bucket name
+
+  PROJECT_ID:  "138138"
+
+  PROJECT_KEY:   "05fb7df4ea90cc917a247e54e9f8b46c"
