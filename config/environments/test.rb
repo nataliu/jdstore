@@ -35,6 +35,7 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  Rails.application.routes.default_url_options[:host] = 'domain.com'
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
